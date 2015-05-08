@@ -1,0 +1,192 @@
+/*
+	TODO:
+	Umstellung auf Portrait/Landscape
+	
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+
+	
+	
+*/
+
+
+
+@media screen and (max-width: @screen-xs) {
+	html.screen-xs {
+		margin-top: calc(~"4rem + 1px");
+	}
+	
+	body > header {
+	  width: 100%;
+	  height: calc(~"4rem + 1px");
+
+		.menu-header {
+		  border-bottom: 1px solid #eee;
+		}
+	  
+	  nav {
+		  top: -1000%;
+	  }
+
+	
+		&.open {
+			height: 100%;
+
+			.menu-header > .icon.close {
+				display: block;
+			}
+
+			nav {
+				top: initial;
+			}
+		}
+	}
+	
+	main {
+		padding: 0;
+	}
+}
+
+@media screen and (min-width: @screen-xs) {
+	body > header {
+		right: calc(~"-60% + 50px");
+		width: 60%;
+		height: 100%;
+		border-left: 1px solid rgba(0,0,0,.05);		
+	}
+
+	.no-touch > body > header {	
+		&:hover {
+			right: 0;
+		
+			nav {
+				padding-left: 2rem;
+			}
+
+			.menu-header {
+				padding-left: 2.5rem;
+			}
+		}
+
+		&::before {
+			content: '';
+			display: block;
+			position: fixed;
+			top: 0;
+			right: 50px;
+			width: 50px;
+			height: 100%;
+		}
+	}
+	
+	.touch > body > header {
+	  nav {
+		  top: -1000%;
+	  }
+
+		.menu-header {
+			height: 100%;
+		}
+	
+		&.open {
+			height: 100%;
+			right: 0;
+
+			.menu-header {
+				height: initial;
+
+				.icon.close {
+					display: block;
+				}
+			}
+
+			nav {
+				top: initial;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: @screen-sm) {
+	body > header {
+		width: 40%;
+		right: calc(~"-40% + 50px");
+	}
+	
+	main > article.blogpost {
+	}
+}
+
+@media screen and (min-width: @screen-md) {
+	body > header {
+		width: 30%;
+	  right: calc(~"-30% + 50px");
+	}
+
+	
+	main > article.blogpost {
+		max-width: 85%; 
+		
+		a {
+			&:hover {
+				color: @gray-base;
+				background: @gray-lighter;
+				border: 1px solid rgba(0,0,0,.01);
+			}
+			
+			.readmore:hover {
+				font-style: italic;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: @screen-lg) {
+	body > header {
+		width: 20%;
+		right: calc(~"-20% + 50px");
+					
+		&:hover::before {
+			right: 20%;
+		}
+	}
+	
+	.touch > body > header {
+		right: 0;
+
+		nav {
+			top: 0;
+		}
+	}
+	
+	main {
+		width: 80%;
+		margin: 0;
+
+		article.blogpost {
+			max-width: 60%; 
+		}
+	}
+}
+
+
+
+
+// Media queries with boundaries
+@media screen and (min-width: @screen-xs) and (max-width: @screen-sm-step){
+	.no-touch > body > header:hover::before {
+		right: 60% !important;
+	}
+}
+
+@media screen and (min-width: @screen-sm) and (max-width: @screen-md-step){
+	.no-touch > body > header:hover::before {
+		right: 40% !important;
+	}
+}
+
+@media screen and (min-width: @screen-md) and (max-width: @screen-lg){
+	.no-touch > body > header:hover::before {
+		right: 30% !important;
+	}
+}

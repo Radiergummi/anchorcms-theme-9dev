@@ -1,0 +1,32 @@
+.noresults {
+	display: inline-block;
+	margin: 2rem 0;
+	padding: .5rem .8rem;
+	background: @gray-lighter;
+	border-radius: @border-radius-base;
+	font-size: 1.4rem;
+}
+
+.results {
+	padding: 1rem 0;
+	li {
+		padding: 1rem;
+		border: 1px solid transparent;
+		border-radius: @border-radius-base;
+
+		a {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+		}
+	
+		&:hover {
+			background: @gray-lighter;
+			border: 1px solid rgba(0,0,0,.01);
+			
+			h2 {
+				color: @brand-primary;
+			}
+		}
+	}
+}

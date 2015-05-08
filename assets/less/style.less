@@ -1,0 +1,167 @@
+@import "reset";
+@import "variables";
+@import "typography";
+@import "iconfont";
+@import "icons";
+@import "transitions";
+
+// Base styles
+@import "base";
+@import "layout";
+@import "navigation";
+
+// Template styles
+@import "post";
+@import "page";
+
+// Page specific styles
+@import "search";
+@import "posts";
+
+// Media queries
+@import "responsive";
+
+// developer helpers
+//@import "devlens";
+
+
+
+
+
+.post-image {
+	position:relative;
+	height:300px;
+}
+
+.post-image .image {
+	position:absolute;
+	height:100%;
+	width:100%;
+}
+
+article .hero h1 {
+	font-size:5rem;
+}
+
+article .hero h2 {
+	font-size:2rem;
+}
+
+.no-comments {
+	text-align:center;
+	display:block;
+	padding-bottom:40px;
+	font-size:1.2rem;
+	color:#666;
+}
+
+.comments {
+	padding:40px;
+}
+
+.comments .new {
+	padding:10px;
+	font-size:1.4rem;
+}
+
+.comments .new input,.comments .new textarea,.comments .new button {
+	width:100%;
+	padding:15px;
+}
+
+.comments .new button {
+	color:rgba(0,0,0,.4);
+	padding:20px 15px 13px;
+	cursor:pointer;
+	transition:all .2s;
+}
+
+.comments .new button:active,.comments .new button:hover {
+	color:rgba(0,0,0,.8);
+}
+
+.comments .new textarea {
+	min-height:200px;
+	resize:vertical;
+}
+
+.comment {
+	margin:8px 0;
+}
+
+.comment:target {
+	box-shadow:0 0 0 2px #51d4ff;
+}
+
+.comment-header {
+	position:relative;
+	padding:30px;
+}
+
+.comment-header h2 {
+	font-size:1.2rem;
+}
+
+.comment-header time {
+	font-size:.9rem;
+	font-weight:100;
+	color:#999;
+	margin-left:10px;
+	padding:10px 15px;
+}
+
+.comment-header time span {
+	color:#03A9F4;
+}
+
+.comment-header .counter {
+	display:block;
+	right:30px;
+	position:absolute;
+	top:calc(50% - 10px);
+	font-size:1.25rem;
+	color:#999;
+}
+
+.comment .content {
+	padding:20px;
+}
+
+::-webkit-input-placeholder {
+/* WebKit browsers */
+	color:rgba(0,0,0,.4);
+}
+
+:-moz-placeholder {
+/* Mozilla Firefox 4 to 18 */
+	color:rgba(0,0,0,.4);
+	opacity:1;
+}
+
+::-moz-placeholder {
+/* Mozilla Firefox 19+ */
+	color:rgba(0,0,0,.4);
+	opacity:1;
+}
+
+:-ms-input-placeholder {
+/* Internet Explorer 10+ */
+	color:rgba(0,0,0,.4);
+}
+
+:focus::-webkit-input-placeholder {
+	color:rgba(0,0,0,0);
+}
+
+:-moz-placeholder:focus {
+	color:rgba(0,0,0,0);
+}
+
+::-moz-placeholder:focus {
+	color:rgba(0,0,0,0);
+	opacity:0;
+}
+
+:-ms-input-placeholder:focus {
+	color:rgba(0,0,0,0);
+}

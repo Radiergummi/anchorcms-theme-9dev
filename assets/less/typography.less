@@ -1,0 +1,83 @@
+body {
+	font-family:@font-family-base;
+	font-weight:400;
+
+	@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi), (min-resolution: 2dppx) { 
+	  font-weight:100;
+	}
+}
+
+h1,h2,h3 {
+	font-family: @headings-font-family;
+	font-weight: 900;
+	line-height: @headings-line-height;
+	color: @headings-color;
+	
+	@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) { 
+	  font-weight:700;
+	}
+}
+
+h4,h5,h6 {
+	font-family: @headings-font-family;
+	font-weight: 700;
+	line-height: @headings-line-height;
+	color: @headings-color;
+	
+	@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) { 
+	  font-weight:400;
+	}
+}
+
+h1 {
+	font-size: @font-size-h1;
+}
+
+h2 {
+	font-size: @font-size-h2;
+}
+
+h3 {
+	font-size: @font-size-h3;
+}
+
+h4 {
+	font-size: @font-size-h4;
+}
+
+h5 {
+	font-size: @font-size-h5;
+}
+
+h6 {
+	font-size: @font-size-h6;
+}
+
+input {
+	font: inherit; 
+}
+
+main {
+	article {
+		p, ol, ul, blockquote, dl { 
+			line-height: @line-height-base;
+			font-size: @font-size-large;
+		}
+
+		small {
+			font-size: @font-size-small;
+		}
+		
+		b, strong {
+			font-weight: 700;
+
+			@media (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) { 
+			  font-weight: 400;
+			}
+		}
+		
+		pre, code {
+			font-family: @font-family-monospace;
+		}
+	}
+}

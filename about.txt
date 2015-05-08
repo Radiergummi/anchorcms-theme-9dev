@@ -1,0 +1,5 @@
+Theme name:     9dev
+Description:	Custom minimal Portfolio Theme for 9dev.de
+Author name:    Moritz Friedrich
+Author site:    http://moritzfriedrich.com
+License:        http://licence.visualidiot.com

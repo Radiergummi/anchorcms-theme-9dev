@@ -1,0 +1,137 @@
+// site main navigation
+
+body > header {
+	position: fixed;
+	top: 0;
+	background: #fff;
+	z-index: @zindex-navigation;
+	transition: all .2s;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+
+	.menu-header {
+		.navigation-item;
+		color: #999;
+		cursor: default;
+		transition: all .2s;
+		
+		.icon.close {
+			display: none;
+			float: right;
+			line-height: 4rem;
+			cursor: pointer;
+			margin-right: 1rem;
+		}
+		
+		&::after {
+			content: '';
+			display: block;
+			clear: both;
+		}
+	}
+	
+	nav {
+		position:relative;
+		width: 100%;
+		transition: all .2s;
+		
+		ul > li > a,
+		ul > li > form {
+			.navigation-item;
+		}
+			
+		ul > li > a {
+			&:hover,
+			&:focus,
+			&.active {
+				color: @brand-primary;
+			}
+		}
+		
+		ul > li > form {
+			#term {
+				width: calc(~"100% - 4rem");
+				padding: 0;
+				font-size: 1.4rem;
+				cursor: pointer;
+
+				&::-webkit-input-placeholder {
+					color: rgba(0,0,0,.87);
+				}
+				
+				&:hover::-webkit-input-placeholder {
+					color: @brand-primary;
+				}
+				
+				&:focus::-webkit-input-placeholder {
+					color: rgba(0,0,0,0);
+				}
+
+				&:hover:not(:focus) {
+					color: @brand-primary;
+				}
+				
+			}
+			
+			.icon {
+				&:hover + #term::-webkit-input-placeholder {
+					color: @brand-primary;
+				}
+			}
+			
+			&.active {
+				.icon {
+					color: @brand-primary;
+				}
+			}
+		}
+	}
+}
+
+
+.pagination {
+	width: 60%;
+	margin:  1rem auto;
+	padding: 1rem .5rem;
+	background: @gray-lighter;
+	border-radius: @border-radius-base;
+	
+	a {
+		display: block;
+		text-decoration: none;
+		font-size: 1.2rem;
+				
+		&.previous {
+			float: left;
+		}
+		
+		&.next {
+			float: right;
+		}
+	}
+	
+	&::after {
+		content: '';
+		display: block;
+		clear: both;
+	}
+}
+
+
+// Functions
+.navigation-item {
+	display:block;
+	width: 100%;
+	padding-left: .5rem;
+	background: #fff;
+	line-height: 4rem;
+	font-size: 1.5rem;
+	text-decoration: none;
+	color: rgba(0,0,0,.87);
+	
+	.icon {
+		height: 28px;
+		width: 28px;
+		margin-right: .5rem;
+	}
+}
